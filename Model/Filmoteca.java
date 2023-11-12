@@ -45,9 +45,9 @@ public class Filmoteca {
     
     public void arranque(){
         
-        Path rutadirectores = Rutas.pathToFileInFolderOnDesktop​("IMDB21","directores.bin");
-        Path rutaactores = Rutas.pathToFileInFolderOnDesktop​("IMDB21","actores.bin");
-        Path rutapeliculas = Rutas.pathToFileInFolderOnDesktop​("IMDB21","peliculas.bin");
+        Path rutadirectores = Rutas.pathToFileInFolderOnDesktop("IMDB21","directores.bin");
+        Path rutaactores = Rutas.pathToFileInFolderOnDesktop("IMDB21","actores.bin");
+        Path rutapeliculas = Rutas.pathToFileInFolderOnDesktop("IMDB21","peliculas.bin");
         
         
         
@@ -69,7 +69,7 @@ public class Filmoteca {
         }
         else{
             
-            rutadirectores = Rutas.pathToFileInFolderOnDesktop​("IMDB21","directores.txt");
+            rutadirectores = Rutas.pathToFileInFolderOnDesktop("IMDB21","directores.txt");
             System.out.println("Se ha cargado txt");
             if(rutadirectores.toFile().exists()){
                 try{
@@ -111,7 +111,7 @@ public class Filmoteca {
         }
         else{
             
-            rutaactores = Rutas.pathToFileInFolderOnDesktop​("IMDB21","actores.txt");
+            rutaactores = Rutas.pathToFileInFolderOnDesktop("IMDB21","actores.txt");
             
             if(rutaactores.toFile().exists()){
                 try{
@@ -153,7 +153,7 @@ public class Filmoteca {
         }
         else{
             
-            rutapeliculas = Rutas.pathToFileInFolderOnDesktop​("IMDB21","peliculas.txt");
+            rutapeliculas = Rutas.pathToFileInFolderOnDesktop("IMDB21","peliculas.txt");
             if(rutapeliculas.toFile().exists()){
                 try{
                     peliculasLista = OpMat.importFromDisk(rutapeliculas.toFile(), "#");
@@ -192,9 +192,9 @@ public class Filmoteca {
     }
     
     public void salida(){
-        Path rutadirectores = Rutas.pathToFileInFolderOnDesktop​("IMDB21","directores.bin");
-        Path rutaactores = Rutas.pathToFileInFolderOnDesktop​("IMDB21","actores.bin");
-        Path rutapeliculas = Rutas.pathToFileInFolderOnDesktop​("IMDB21","peliculas.bin");
+        Path rutadirectores = Rutas.pathToFileInFolderOnDesktop("IMDB21","directores.bin");
+        Path rutaactores = Rutas.pathToFileInFolderOnDesktop("IMDB21","actores.bin");
+        Path rutapeliculas = Rutas.pathToFileInFolderOnDesktop("IMDB21","peliculas.bin");
         
         //Guardar directores.bin
         try{
@@ -231,7 +231,7 @@ public class Filmoteca {
     }
     
     public void exportarDirectores(){
-        File exportedCol = Rutas.pathToFileInFolderOnDesktop​("IMDB21","directores.col").toFile();
+        File exportedCol = Rutas.pathToFileInFolderOnDesktop("IMDB21","directores.col").toFile();
         if(exportedCol.exists()){
             exportedCol.delete();
         }
@@ -257,7 +257,7 @@ public class Filmoteca {
     }
     
     public void exportarPelisHTML(){
-        File exportedHTML = Rutas.pathToFileInFolderOnDesktop​("IMDB21","peliculas.html").toFile();
+        File exportedHTML = Rutas.pathToFileInFolderOnDesktop("IMDB21","peliculas.html").toFile();
         if(exportedHTML.exists()){
             exportedHTML.delete();
         }
